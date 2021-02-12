@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Find user</title>
+</head>
+<body>
+<h1>Send message</h1>
+<form action="#" th:action="@{/mail}" th:object="${mail}" method="post">
+    <p>Theme: </p>
+    <p> <input type="text" th:field="*{subject}" required/></p>
+    <p>Message: </p>
+    <p> <textarea th:field="*{message}" required></textarea></p>
+    <p><input type="submit" value="Send" /> <input type="reset" value="Reset" /></p>
+</form>
+<form action="/finder">
+    <p><input type="submit" value="Find another user"></p>
+</form>
+<form action="/form">
+    <p><input type="submit" value="Add new user"></p>
+</form>
+</body>
+</html>

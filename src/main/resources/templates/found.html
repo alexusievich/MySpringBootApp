@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Found</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>The user was successfully found</h1>
+<p th:text="${name}"></p>
+<p th:text="${surname}"></p>
+<p th:text="${patronymic}"></p>
+<p th:text="${age}"></p>
+<p th:text="${salary}"></p>
+<p th:text="${email}"></p>
+<p th:text="${work}"></p>
+<p th:text="${time}"></p>
+<p> User agent: <span th:text="${#httpServletRequest.getHeader('User-Agent')}"></span></p>
+<form action="/finder">
+    <input type="submit" value="Find user"/>
+</form>
+<p></p>
+<form action="/mail">
+    <input type="submit" value="Send message">
+</form>
+<form action="/form">
+    <p><input type="submit" value="Add new user"></p>
+</form>
+</body>
+</html>
